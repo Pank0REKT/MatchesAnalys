@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="/">Вернуться</a>
+    <ol>
+        <h2>Рейтинг команд</h2>
+        {% for team in top_teams %}
+        <li>{{team}}</li>
+        {% endfor %}
+    </ol>
+</body>
+
+</html>
