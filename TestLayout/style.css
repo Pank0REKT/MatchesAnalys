@@ -1,0 +1,18 @@
+div {
+    display: block;
+}
+
+#link_sender {
+    background-color: coral;
+    text-align: center;
+}
+
+#logos{
+    display: inline-block;
+}
+
+.team_logo{
+    width: 8%;
+    margin-right: 15%;
+    margin-left: 15%;
+}
