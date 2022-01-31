@@ -1,20 +1,55 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
-    <title>Анализ матчей CSGO</title>
-    <link rel="stylesheet" href="style/style.css">
-</head>
+    <title>MatchAnalys</title>
+    <link rel="stylesheet" href="core\static\css">
 
 <body>
-    <h1>CSGOAnalyst</h1>
-    <a href="rating">Рейтинг команд</a>
-    <ol>
-        <b>Список матчей на сегодня</b>
-        <li>NaVi - G2</li>
-        <li>Gambit - Furia</li>
-    </ol>
+    <!-- Блок меню -->
+    <div id="menu">
+        <a href="index.html" class="menu_item">
+            <p><b>Главная</b></p>
+        </a>
+        <a href="rating" class="menu_item">
+            <p><b>Рейтинг команд</b></p>
+        </a>
+        <a href="index.html" class="menu_item">
+            <p><b>Авторы</b></p>
+        </a>
+    </div>
+    <!-- Заголовок -->
+    <h1>Анализ киберспортивных матчей</h1>
+    <b>Веб-приложение помогает предсказать исход матча основываясь на алгоритме,
+        который анализиурет прошедшие матчи и статистику.</b>
+
+    <!-- Блок отправки ссылки -->
+    <div id="link_sender">
+        <p>Введите ссылку на матч: <br>
+            <input type="text" size="40">
+        </p>
+        <input type="submit" value="Анализировать">
+    </div>
+
+    <!-- Блоки вывода результатов анализа -->
+    <div class="done_block">
+        <b>Название команды</b>
+        <br>
+        <img src="https://img-cdn.hltv.org/teamlogo/SMhzsxzbkIrgqCOOKGRXlW.svg?ixlib=java-2.1.0&s=e6a9ce0345c7d703e5eaac14307f69aa"
+            alt="team1_logo" class="logo">
+        <br>
+        <b>Шанс на победу: %</b>
+    </div>
+    <div class="done_block">
+        <b>Название команды</b>
+        <br>
+        <img src="https://img-cdn.hltv.org/teamlogo/SMhzsxzbkIrgqCOOKGRXlW.svg?ixlib=java-2.1.0&s=e6a9ce0345c7d703e5eaac14307f69aa"
+            alt="team1_logo" class="logo">
+        <br>
+        <b>Шанс на победу: %</b>
+    </div>
 </body>
 
 </html>

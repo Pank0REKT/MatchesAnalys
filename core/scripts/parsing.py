@@ -10,3 +10,7 @@ def get_all_names():
     for i in name:
         names.append(i.string)
     return names
+
+
+def analys_match(link):
+    soup = soup = BeautifulSoup(requests.get(link).text, 'lxml')
