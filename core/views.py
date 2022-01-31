@@ -9,3 +9,11 @@ def index(request):
 def rating(request):
     top_teams = get_all_names()
     return render(request, 'rating.html', {'top_teams': top_teams})
+
+
+def description(request):
+    return render(request, 'description.html')
+
+
+def analys(request):
+    return render(request, 'analys.html')

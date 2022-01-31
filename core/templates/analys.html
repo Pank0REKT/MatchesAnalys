@@ -1,11 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <title>Анализ</title>
-</head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 
 <body>
     <!-- Блок меню -->
@@ -14,20 +14,19 @@
             <img src="https://1.downloader.disk.yandex.ru/preview/96733f936cc5c0b0f53dc5b709377adbb352d77069e4b5a6977dbe2e714e2076/inf/Ndem7qusIrQWIP9oHRpI118f17MEXhkfTdkAtqzfggZiwPgwD9nnadQYKqnNWVA8mJHn-aeTzkGXmFBHzH_nhQ%3D%3D?uid=199673883&filename=logo_rvp.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=199673883&tknv=v2&size=1349x657"
                 alt="logo">
         </div>
-        <a href="index.html" class="menu_item">
+        <a href="main" class="menu_item">
             <p><b>Главная</b> </p>
         </a>
         <a href="rating" class="menu_item">
             <p><b>Рейтинг</b></p>
         </a>
-        <a href="analys.html" class="menu_item">
+        <a href="analys" class="menu_item">
             <p><b>Анализ</b></p>
         </a>
-        <a href="description.html" class="menu_item">
+        <a href="description" class="menu_item">
             <p><b>О нас</b></p>
         </a>
     </div>
-
     <!-- Заголовок -->
     <div id="sitetitle">
         <h1>Анализ киберспортивных матчей</h1>
@@ -59,7 +58,7 @@
         <br>
         <b>Шанс на победу: %</b>
     </div>
-
+    </div>
 </body>
 
 </html>

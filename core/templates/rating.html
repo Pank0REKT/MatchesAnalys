@@ -1,17 +1,38 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Рейтинг команд</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 </head>
 
 <body>
-    <a href="/">Вернуться</a>
+    <!-- Блок меню -->
+    <div id="menu">
+        <div id="menu_logo">
+            <img src="https://1.downloader.disk.yandex.ru/preview/96733f936cc5c0b0f53dc5b709377adbb352d77069e4b5a6977dbe2e714e2076/inf/Ndem7qusIrQWIP9oHRpI118f17MEXhkfTdkAtqzfggZiwPgwD9nnadQYKqnNWVA8mJHn-aeTzkGXmFBHzH_nhQ%3D%3D?uid=199673883&filename=logo_rvp.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=199673883&tknv=v2&size=1349x657"
+                alt="logo">
+        </div>
+        <a href="main" class="menu_item">
+            <p><b>Главная</b> </p>
+        </a>
+        <a href="rating" class="menu_item">
+            <p><b>Рейтинг</b></p>
+        </a>
+        <a href="analys" class="menu_item">
+            <p><b>Анализ</b></p>
+        </a>
+        <a href="description" class="menu_item">
+            <p><b>О нас</b></p>
+        </a>
+    </div>
+    <!-- Список рейтинга -->
     <ol>
-        <h2>Рейтинг команд</h2>
+        <h2 id="sitetitle">Рейтинг команд</h2>
         {% for team in top_teams %}
-        <li>{{team}}</li>
+        <li class="rating_team">{{team}}</li>
         {% endfor %}
     </ol>
 </body>
