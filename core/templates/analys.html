@@ -27,6 +27,7 @@
             <p><b>О нас</b></p>
         </a>
     </div>
+    {% block content %}
     <!-- Заголовок -->
     <div id="sitetitle">
         <h1>Анализ киберспортивных матчей</h1>
@@ -34,31 +35,30 @@
 
     <!-- Блок отправки ссылки -->
     <div id="link_sender">
-        <p>Введите ссылку на матч:
-            <br>
-            <input type="text" size="40">
-        </p>
-        <input class="analysbutton" type="submit" value="Анализировать">
+        <form method="POST">
+            {% csrf_token %}
+            <p><input type="text" placeholder="Введите сюда ссылку" name="link"></p>
+            <p><input class="analysbutton" type="submit" value="Анализировать"></p>
+        </form>
     </div>
 
     <!-- Блоки вывода результатов анализа -->
     <div class="done_block">
-        <b>Название команды</b>
+        <b>{{first_team_name}}</b>
         <br>
-        <img src="https://img-cdn.hltv.org/teamlogo/SMhzsxzbkIrgqCOOKGRXlW.svg?ixlib=java-2.1.0&s=e6a9ce0345c7d703e5eaac14307f69aa"
-            alt="team1_logo" class="logo">
+        <img src="" alt="team1_logo" class="logo">
         <br>
-        <b>Шанс на победу: %</b>
+        <b>Шанс на победу: {{first_team_percents}} </b>
     </div>
     <div class="done_block">
-        <b>Название команды</b>
+        <b>{{second_team_name}}</b>
         <br>
-        <img src="https://img-cdn.hltv.org/teamlogo/SMhzsxzbkIrgqCOOKGRXlW.svg?ixlib=java-2.1.0&s=e6a9ce0345c7d703e5eaac14307f69aa"
-            alt="team1_logo" class="logo">
+        <img src="" alt="team2_logo" class="logo">
         <br>
-        <b>Шанс на победу: %</b>
+        <b>Шанс на победу: {{second_team_percents}} </b>
     </div>
     </div>
+    {% endblock %}
 </body>
 
 </html>
